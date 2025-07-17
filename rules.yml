@@ -1,0 +1,6 @@
+rules:
+
+-rule: Advertência - Avise que você não é um nutricionista e é apenas um bot para consulta.
+ steps:
+   -intent: greet
+   -action: utter_disclaimer
