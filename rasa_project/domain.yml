@@ -1,34 +1,50 @@
 version: "3.1"
 
+# Define todas as intencoes que o bot deve reconhecer.
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - cumprimentar
+  - despedir
+  - afirmar
+  - negar
+  - agendar_consulta
+  - pedir_info_nutricional:
+      use entities:
+        alimento
 
+# Define todas as entidades que o bot pode extrair.
+entities:
+  - alimento
+
+# Define slots para armazenar informacoes durante uma conversa.
+slots:
+  alimento:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: alimento
+
+# Define todas as respostas possiveis do bot (utterances).
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_cumprimentar:
+  - text: "Olá! Eu sou seu assistente nutricional. Como posso ajudar?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_de_nada:
+  - text: "De nada! Se precisar de mais alguma coisa, é só pedir."
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Até mais!"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_disclaimer:
+  - text: "Importante: Eu sou um bot de demonstração e não um profissional de 
+          saúde. As informações fornecidas são para fins educacionais. Sempre consulte um
+          nutricionista ou médico para conselhos de saude."
 
+# Define todas as acoes personalizadas que o bot pode executar.
+actions:
+  - action_consultar_nutrientes
+
+# Define a configuracao da sessao.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
