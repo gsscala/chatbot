@@ -13,9 +13,14 @@ language: pt
 # https://rasa.com/docs/reference/config/components/nlu-components
 pipeline:
   # https://spacy.io/models/pt#pt_core_news_md
+  # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/utils/spacy_utils.py
   - name: SpacyNLP
     model: "pt_core_news_md"
     case_sensitive: false
+  # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/tokenizers/spacy_tokenizer.py
+  - name: SpacyTokenizer
+  # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/featurizers/dense_featurizer/spacy_featurizer.py
+  - name: SpacyFeaturizer
 #   - name: WhitespaceTokenizer
 #   - name: RegexFeaturizer
 #   - name: LexicalSyntacticFeaturizer
