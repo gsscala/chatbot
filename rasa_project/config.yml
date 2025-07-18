@@ -14,13 +14,17 @@ language: pt
 pipeline:
   # https://spacy.io/models/pt#pt_core_news_md
   # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/utils/spacy_utils.py
+  # 1. SpacyNLP: Carrega o modelo spaCy pre-treinado para portugues.
   - name: SpacyNLP
     model: "pt_core_news_md"
     case_sensitive: false
   # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/tokenizers/spacy_tokenizer.py
+  # 2. SpacyTokenizer: Usa as regras do spaCy para dividir o texto em tokens.  
   - name: SpacyTokenizer
   # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/featurizers/dense_featurizer/spacy_featurizer.py
+  # 3. SpacyFeaturizer: Cria representacoes vetoriais densas para os tokens.
   - name: SpacyFeaturizer
+    pooling: "mean"
 #   - name: WhitespaceTokenizer
 #   - name: RegexFeaturizer
 #   - name: LexicalSyntacticFeaturizer
