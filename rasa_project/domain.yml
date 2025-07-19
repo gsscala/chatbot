@@ -17,6 +17,8 @@ intents:
 # Define todas as entidades que o bot pode extrair.
 entities:
   - alimento
+  - data
+  - hora
 
 # Define slots para armazenar informacoes durante uma conversa.
 slots:
@@ -26,6 +28,20 @@ slots:
     mappings:
       - type: from_entity
         entity: alimento
+  # Define slot para armazenar dados adicionais de marcação para consulta com data e hora.
+  data: 
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: data
+
+  hora:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: hora
 
 # Define todas as respostas possiveis do bot (utterances).
 responses:
