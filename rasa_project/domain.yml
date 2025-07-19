@@ -10,6 +10,8 @@ intents:
   - agradecer
   - duvida
   - ajuda
+  - out_of_scope # Intenção para lidar com perguntas fora do escopo
+  - nlu_fallback # Intenção para lidar com falhas de NLU ou ao usuário digitar algo que não foi entendido
   - pedir_info_nutricional:
       use entities:
         alimento
@@ -62,6 +64,17 @@ responses:
 
   utter_duvida:
   - text: "Claro! Qual é a sua dúvida?"
+
+  utter_out_of_scope:
+  - text: "Infelizmente, não posso ajudar com isso. Meu foco é em nutrição e saúde. Se precisar de ajuda com isso aí estou à disposição!"
+  - text: "Desculpe, não entendi o que você quis dizer. Pode reformular ou perguntar algo sobre alimentação?"
+
+  utter_nlu_fallback:
+  - text: "Desculpe, não consegui entender. Poderia escrever novamente?"
+  - text: "Não entendi o que você quis dizer. Poderia reformular a pergunta?"
+  - text: "Hmm... não entendi isso. Pode tentar dizer de outra forma?"
+  - text: "Não consegui compreender. Tente usar palavras como 'banana', 'proteína', ou 'agendar consulta'."
+
 
   utter_disclaimer:
   - text: "Importante: Eu sou um bot de demonstração e não um profissional de 
