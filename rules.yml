@@ -1,6 +1,8 @@
-rules:
+version: "3.1"
 
--rule: Advertência - Avise que você não é um nutricionista e é apenas um bot para consulta.
- steps:
-   -intent: greet
-   -action: utter_disclaimer
+rules:
+  - rule: Advertência - Avise que você não é um nutricionista e é apenas um bot para consulta.
+    conversation_start: true
+    steps:
+      - action: utter_disclaimer
+      - action: utter_cumprimentar
