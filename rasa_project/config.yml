@@ -18,29 +18,39 @@ pipeline:
   - name: SpacyNLP
     model: "pt_core_news_md"
     case_sensitive: false
+
   # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/tokenizers/spacy_tokenizer.py
   # 2. SpacyTokenizer: Usa as regras do spaCy para dividir o texto em tokens.  
   - name: SpacyTokenizer
+
   # https://github.com/RasaHQ/rasa/blob/3.6.x/rasa/nlu/featurizers/dense_featurizer/spacy_featurizer.py
   # 3. SpacyFeaturizer: Cria representacoes vetoriais densas para os tokens.
   - name: SpacyFeaturizer
     pooling: "mean"
-#   - name: WhitespaceTokenizer
-#   - name: RegexFeaturizer
-#   - name: LexicalSyntacticFeaturizer
-#   - name: CountVectorsFeaturizer
-#   - name: CountVectorsFeaturizer
-#     analyzer: char_wb
-#     min_ngram: 1
-#     max_ngram: 4
-#   - name: DIETClassifier
-#     epochs: 100
-#   - name: EntitySynonymMapper
-#   - name: ResponseSelector
-#     epochs: 100
-#   - name: FallbackClassifier
-#     threshold: 0.3
-#     ambiguity_threshold: 0.1
+
+  ### O código abaixo é original do PDF do Giovanni. ###
+  # 4. RegexFeaturizer: Cria caracteristicas para padroes de expressao regular.
+  - name: RegexFeaturizer
+
+  # 5. LexicalSyntacticFeaturizer: Cria caracteristicas para padroes lexicais e sintaticos.
+  - name: LexicalSyntacticFeaturizer
+
+  # 6. CountVectorsFeaturizer: Cria representacoes bag-of-words para o texto.
+  - name: CountVectorsFeaturizer
+  
+  # 7. DIETClassifier: O componente principal para classificacao de intencoes e extracao de entidades.
+  # Ele usa caracteristicas de todos os componentes anteriores.
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  
+  # 8. EntitySynonymMapper: Mapeia diferentes valores de entidade para um canonico.
+  - name: EntitySynonymMapper
+  
+  # 9. ResponseSelector: Usado para lidar com FAQs e conversas informais.
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: chitchat
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
