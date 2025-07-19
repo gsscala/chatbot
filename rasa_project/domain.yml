@@ -7,6 +7,9 @@ intents:
   - afirmar
   - negar
   - agendar_consulta
+  - agradecer
+  - duvida
+  - ajuda
   - pedir_info_nutricional:
       use entities:
         alimento
@@ -34,6 +37,15 @@ responses:
 
   utter_goodbye:
   - text: "Até mais!"
+
+  utter_agradecer:
+  - text: "Obrigado por entrar em contato! Estou aqui para ajudar."
+
+  utter_ajuda:
+  - text: "Posso ajudar com informações nutricionais, agendar consultas ou responder a dúvidas sobre alimentação saudável. O que você precisa?"
+
+  utter_duvida:
+  - text: "Claro! Qual é a sua dúvida?"
 
   utter_disclaimer:
   - text: "Importante: Eu sou um bot de demonstração e não um profissional de 
