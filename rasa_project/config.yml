@@ -52,14 +52,18 @@ pipeline:
     epochs: 100
     retrieval_intent: chitchat
 
-# Configuration for Rasa Core.
+
 # https://rasa.com/docs/rasa/core/policies/
+# A chave ’policies’ define os modelos de gerenciamento de dialogo.
 policies:
-# # No configuration for policies was provided. The following default policies were used to train your model.
-# # If you'd like to customize them, uncomment and adjust the policies.
-# # See https://rasa.com/docs/rasa/policies for more information.
-#   - name: MemoizationPolicy
-#   - name: TEDPolicy
-#     max_history: 5
-#     epochs: 100
-#   - name: RulePolicy
+# 1. MemoizationPolicy: Lembra conversas dos dados de treinamento.
+- name: MemoizationPolicy
+
+# 2. RulePolicy: Lida com conversas que devem sempre seguir um caminho fixo.
+- name: RulePolicy
+
+# 3. TEDPolicy: Um modelo baseado em transformer que generaliza para conversas nao vistas.
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  constrain_similarities: true
