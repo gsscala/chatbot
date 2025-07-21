@@ -1,13 +1,8 @@
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Advertência - Avise que você não é um nutricionista e é apenas um bot para consulta.
+    conversation_start: true
+    steps:
+      - action: utter_disclaimer
+      - action: utter_saudar
