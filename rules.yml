@@ -5,4 +5,4 @@ rules:
     conversation_start: true
     steps:
       - action: utter_disclaimer
-      - action: utter_cumprimentar
+      - action: utter_saudar
