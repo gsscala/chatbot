@@ -2,16 +2,15 @@ version: "3.1"
 
 # Define todas as intencoes que o bot deve reconhecer.
 intents:
-  - cumprimentar
+  - saudar
   - despedir
   - afirmar
   - negar
-  - agendar_consulta
   - agradecer
-  - duvida
-  - ajuda
-  - out_of_scope # Intenção para lidar com perguntas fora do escopo
-  - nlu_fallback # Intenção para lidar com falhas de NLU ou ao usuário digitar algo que não foi entendido
+  #- duvida
+  #- ajuda
+  #- out_of_scope # Intenção para lidar com perguntas fora do escopo
+  #- nlu_fallback # Intenção para lidar com falhas de NLU ou ao usuário digitar algo que não foi entendido
   - pedir_info_nutricional:
       use entities:
         alimento
@@ -19,8 +18,6 @@ intents:
 # Define todas as entidades que o bot pode extrair.
 entities:
   - alimento
-  - data
-  - hora
 
 # Define slots para armazenar informacoes durante uma conversa.
 slots:
@@ -30,56 +27,43 @@ slots:
     mappings:
       - type: from_entity
         entity: alimento
-  # Define slot para armazenar dados adicionais de marcação para consulta com data e hora.
-  data: 
-    type: text
-    influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: data
-
-  hora:
-    type: text
-    influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: hora
-
+        
 # Define todas as respostas possiveis do bot (utterances).
 responses:
-  utter_cumprimentar:
+  utter_saudar:
   - text: "Olá! Eu sou seu assistente nutricional. Como posso ajudar?"
 
   utter_de_nada:
   - text: "De nada! Se precisar de mais alguma coisa, é só pedir."
 
-  utter_goodbye:
+  utter_despedir:
   - text: "Até mais!"
 
   utter_agradecer:
   - text: "Obrigado por entrar em contato! Estou aqui para ajudar."
 
-  utter_ajuda:
-  - text: "Posso ajudar com informações nutricionais, agendar consultas ou responder a dúvidas sobre alimentação saudável. O que você precisa?"
+  #utter_ajuda:
+  #- text: "Posso ajudar com informações nutricionais, agendar consultas ou responder a dúvidas sobre alimentação saudável. O que você precisa?"
 
-  utter_duvida:
-  - text: "Claro! Qual é a sua dúvida?"
+  #utter_duvida:
+  #- text: "Claro! Qual é a sua dúvida?"
 
-  utter_out_of_scope:
-  - text: "Infelizmente, não posso ajudar com isso. Meu foco é em nutrição e saúde. Se precisar de ajuda com isso aí estou à disposição!"
-  - text: "Desculpe, não entendi o que você quis dizer. Pode reformular ou perguntar algo sobre alimentação?"
+  #utter_out_of_scope:
+  #- text: "Infelizmente, não posso ajudar com isso. Meu foco é em nutrição e saúde. Se precisar de ajuda com isso aí estou à disposição!"
+  #- text: "Desculpe, não entendi o que você quis dizer. Pode reformular ou perguntar algo sobre alimentação?"
 
-  utter_nlu_fallback:
-  - text: "Desculpe, não consegui entender. Poderia escrever novamente?"
-  - text: "Não entendi o que você quis dizer. Poderia reformular a pergunta?"
-  - text: "Hmm... não entendi isso. Pode tentar dizer de outra forma?"
-  - text: "Não consegui compreender. Tente usar palavras como 'banana', 'proteína', ou 'agendar consulta'."
-
+  #utter_nlu_fallback:
+  #- text: "Desculpe, não consegui entender. Poderia escrever novamente?"
+  #- text: "Não entendi o que você quis dizer. Poderia reformular a pergunta?"
+  #- text: "Hmm... não entendi isso. Pode tentar dizer de outra forma?"
 
   utter_disclaimer:
   - text: "Importante: Eu sou um bot de demonstração e não um profissional de 
           saúde. As informações fornecidas são para fins educacionais. Sempre consulte um
           nutricionista ou médico para conselhos de saude."
+
+  utter_ask_rephrase:
+  - text: "Desculpe, nao entendi. Voce pode reformular sua pergunta?"
 
 # Define todas as acoes personalizadas que o bot pode executar.
 actions:
