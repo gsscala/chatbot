@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+  - rule: Advertência - Avise que você não é um nutricionista e é apenas um bot para consulta.
+    conversation_start: true
+    steps:
+      - action: utter_disclaimer
+      - action: utter_saudar
