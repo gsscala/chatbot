@@ -1,91 +1,113 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: saudar
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - oi
+    - ola
+    - boa tarde
+    - bom dia
+    - e ai, tudo bem?
+    - boa noite
+    - oii
+    - oiii
+    - eae
+    - eai
+    - iai
+    - opa
+    - ola, como vai?
+    - salve
+    - como vai você?
+    - tudo certo?
+    - olá, bom dia
+    - olá, boa tarde
 
-- intent: goodbye
+- intent: despedir
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - tchau
+    - adeus
+    - ate mais
+    - flw
+    - ate a proxima
+    - valeu, ate mais
+    - valeu, tchau
+    - obrigado, tchau
+    - valeu, falou
+    - ate mais!
+    - é isso, tchau
+    - fico por aqui
+    - abraço!
 
-- intent: affirm
+- intent: afirmar
   examples: |
+    - sim
+    - s
+    - ok
+    - claro
+    - parece bom
+    - correto
+    - sim, isso mesmo
+    - isso mesmo
+    - pode ser
     - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - perfeito
+    - com certeza
+    - positivo
+    - exato
+    - é isso aí
 
-- intent: deny
+- intent: negar
   examples: |
-    - no
+    - não
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - nunca
+    - eu acho que não
+    - não gostei disso
+    - sem chance
+    - não necessariamente
+    - nem tanto
+    - jamais
+    - nem um pouco
+    - no
+    - não dá
+    - não parece bom
+    - nem pa
+    - nada a ver
+    - de forma alguma
+    - negativo
+    - discordo
 
-- intent: mood_great
+- intent: agradecer
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - obrigado
+    - valeu
+    - isso mesmo
+    - muito obrigado
+    - grato
+    - agradecido
+    - tamo junto
+    - obrigadão
+    - valeu mesmo
+    - agradeço a ajuda
+    - show, valeu!
 
-- intent: mood_unhappy
+- intent: pedir_info_nutricional
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - qual a caloria da [banana](alimento)?
+    - me fala os nutrientes do [arroz integral](alimento)
+    - quanta proteina tem no [peito de frango](alimento)?
+    - informacoes nutricionais da [maca](alimento) por favor
+    - [batata doce](alimento)
+    - e sobre o [ovo](alimento)?
+    - qual a composicao do [feijao preto](alimento)
+    - gostaria de saber sobre a [tapioca](alimento)
+    - poderia me dizer os valores nutricionais do [açaí](alimento)?
+    - quantos lipídeos tem na [picanha](alimento)?
+    - qual a quantidade de carboidratos em [100g de pão francês](alimento)?
+    - busque por [brócolis cozido](alimento)
+    - info nutricional [salmão grelhado](alimento)
+    - calorias [leite integral](alimento)
+    - [abacate](alimento) tem muita gordura?
+    - o que me diz sobre a [castanha-do-pará](alimento)?
+    - queria saber os dados do [queijo minas](alimento)
+    - me vê os detalhes da [laranja](alimento)
