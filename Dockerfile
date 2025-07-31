@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
+RUN pip install --no-cache-dir spacy
+
 RUN pip install --no-cache-dir \
     absl-py==1.4.0 \
     aio-pika==8.2.3 \
