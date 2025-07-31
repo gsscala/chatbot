@@ -2,7 +2,7 @@ from typing import Any, Dict, List
 import pandas as pd
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from database.FoodFinder import FoodFinder
+from ..database.FoodFinder import FoodFinder
 
 food = FoodFinder()
 
