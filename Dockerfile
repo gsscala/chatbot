@@ -175,6 +175,8 @@ RUN pip install --no-cache-dir \
 
 COPY . /app
 
+RUN python -m spacy download pt_core_news_md
+
 EXPOSE 5005
 
 CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
