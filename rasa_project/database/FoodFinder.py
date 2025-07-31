@@ -11,14 +11,17 @@ class FoodFinder:
             'Fibra Alimentar (g)'
         ]
         
+        self.state = True
+        
         try:
             self.df = pd.read_csv(filepath, sep=';', usecols=cols, index_col='Descrição dos alimentos')
             
         except Exception as e:
-            print(f"Ocorreu um erro ao tentar ler o arquivo:\n{e}")
+            self.state = False
+            print(e)
 
     def findfood(self, food_name:str):
-        if self.df is None:
+        if not self.state:
             print("Dataframe não inicializado")
             return
         
@@ -27,4 +30,4 @@ class FoodFinder:
             return self.df.loc[bool_series]
         
         except Exception as e:
-            print(f"Ocorreu um erro ao buscar o alimento: {e}")
+            print(e)
