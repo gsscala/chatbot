@@ -1,0 +1,206 @@
+version: '3.1'
+nlu:
+- lookup: alimento
+  examples: "- Arroz, integral, cozido\n- Arroz, integral, cru\n- Arroz, tipo 1, cozido\n\
+    - Arroz, tipo 1, cru\n- Arroz, tipo 2, cozido\n- Arroz, tipo 2, cru\n- Aveia,\
+    \ flocos, crua\n- Biscoito, doce, maisena\n- Biscoito, doce, recheado com chocolate\n\
+    - Biscoito, doce, recheado com morango\n- Biscoito, doce, wafer, recheado de chocolate\n\
+    - Biscoito, doce, wafer, recheado de morango\n- Biscoito, salgado, cream cracker\n\
+    - Bolo, mistura para\n- Bolo, pronto, aipim\n- Bolo, pronto, chocolate\n- Bolo,\
+    \ pronto, coco\n- Bolo, pronto, milho\n- Canjica, branca, crua\n- Canjica, com\
+    \ leite integral\n- Cereais, milho, flocos, com sal\n- Cereais, milho, flocos,\
+    \ sem sal\n- Cereais, mingau, milho, infantil\n- Cereais, mistura para vitamina,\
+    \ trigo, cevada e aveia\n- Cereal matinal, milho\n- Cereal matinal, milho, açúcar\n\
+    - Creme de arroz, pó\n- Creme de milho, pó\n- Curau, milho verde\n- Curau, milho\
+    \ verde, mistura para\n- Farinha, de arroz, enriquecida\n- Farinha, de centeio,\
+    \ integral\n- Farinha, de milho, amarela\n- Farinha, de rosca\n- Farinha, de trigo\n\
+    - Farinha, láctea, de cereais\n- Lasanha, massa fresca, cozida\n- Lasanha, massa\
+    \ fresca, crua\n- Macarrão, instantâneo\n- Macarrão, trigo, cru\n- Macarrão, trigo,\
+    \ cru, com ovos\n- Milho, amido, cru\n- Milho, fubá, cru\n- Milho, verde, cru\n\
+    - Milho, verde, enlatado, drenado\n- Mingau tradicional, pó\n- Pamonha, barra\
+    \ para cozimento, pré-cozida\n- Pão, aveia, forma\n- Pão, de soja\n- Pão, glúten,\
+    \ forma\n- Pão, milho, forma\n- Pão, trigo, forma, integral\n- Pão, trigo, francês\n\
+    - Pão, trigo, sovado\n- Pastel, de carne, cru\n- Pastel, de carne, frito\n- Pastel,\
+    \ de queijo, cru\n- Pastel, de queijo, frito\n- Pastel, massa, crua\n- Pastel,\
+    \ massa, frita\n- Pipoca, com óleo de soja, sem sal\n- Polenta, pré-cozida\n-\
+    \ Torrada, pão francês\n- Abóbora, cabotian, cozida\n- Abóbora, cabotian, crua\n\
+    - Abóbora, menina brasileira, crua\n- Abóbora, moranga, crua\n- Abóbora, moranga,\
+    \ refogada\n- Abóbora, pescoço, crua\n- Abobrinha, italiana, cozida\n- Abobrinha,\
+    \ italiana, crua\n- Abobrinha, italiana, refogada\n- Abobrinha, paulista, crua\n\
+    - Acelga, crua\n- Agrião, cru\n- Aipo, cru\n- Alface, americana, crua\n- Alface,\
+    \ crespa, crua\n- Alface, lisa, crua\n- Alface, roxa, crua\n- Alfavaca, crua\n\
+    - Alho, cru\n- Alho-poró, cru\n- Almeirão, cru\n- Almeirão, refogado\n- Batata,\
+    \ baroa, cozida\n- Batata, baroa, crua\n- Batata, doce, cozida\n- Batata, doce,\
+    \ crua\n- Batata, frita, tipo chips, industrializada\n- Batata, inglesa, cozida\n\
+    - Batata, inglesa, crua\n- Batata, inglesa, frita\n- Batata, inglesa, sauté\n\
+    - Berinjela, cozida\n- Berinjela, crua\n- Beterraba, cozida\n- Beterraba, crua\n\
+    - Biscoito, polvilho doce\n- Brócolis, cozido\n- Brócolis, cru\n- Cará, cozido\n\
+    - Cará, cru\n- Caruru, cru\n- Catalonha, crua\n- Catalonha, refogada\n- Cebola,\
+    \ crua\n- Cebolinha, crua\n- Cenoura, cozida\n- Cenoura, crua\n- Chicória, crua\n\
+    - Chuchu, cozido\n- Chuchu, cru\n- Coentro, folhas desidratadas\n- Couve, manteiga,\
+    \ crua\n- Couve, manteiga, refogada \n- Couve-flor, crua\n- Couve-flor, cozida\n\
+    - Espinafre, Nova Zelândia, cru\n- Espinafre, Nova Zelândia, refogado\n- Farinha,\
+    \ de mandioca, crua\n- Farinha, de mandioca, torrada\n- Farinha, de puba\n- Fécula,\
+    \ de mandioca\n- Feijão, broto, cru\n- Inhame, cru\n- Jiló, cru\n- Jurubeba, crua\n\
+    - Mandioca, cozida\n- Mandioca, crua\n- Mandioca, farofa, temperada\n- Mandioca,\
+    \ frita\n- Manjericão, cru\n- Maxixe, cru\n- Mostarda, folha, crua\n- Nhoque,\
+    \ batata, cozido\n- Nabo, cru\n- Palmito, juçara, em conserva\n- Palmito, pupunha,\
+    \ em conserva\n- Pão, de queijo, assado\n- Pão, de queijo, cru\n- Pepino, cru\n\
+    - Pimentão, amarelo, cru\n- Pimentão, verde, cru\n- Pimentão, vermelho, cru\n\
+    - Polvilho, doce\n- Quiabo, cru\n- Rabanete, cru\n- Repolho, branco, cru\n- Repolho,\
+    \ roxo, cru\n- Repolho, roxo, refogado\n- Rúcula, crua\n- Salsa, crua\n- Seleta\
+    \ de legumes, enlatada\n- Serralha, crua\n- Taioba, crua\n- Tomate, com semente,\
+    \ cru\n- Tomate, extrato\n- Tomate, molho industrializado\n- Tomate, purê\n- Tomate,\
+    \ salada\n- Vagem, crua\n- Abacate, cru\n- Abacaxi, cru\n- Abacaxi, polpa, congelada\n\
+    - Abiu, cru\n- Açaí, polpa, com xarope de guaraná e glucose\n- Açaí, polpa, congelada\n\
+    - Acerola, crua\n- Acerola, polpa, congelada\n- Ameixa, calda, enlatada \n- Ameixa,\
+    \ crua\n- Ameixa, em calda, enlatada, drenada \n- Atemóia, crua\n- Banana, da\
+    \ terra, crua\n- Banana, doce em barra\n- Banana, figo, crua\n- Banana, maçã,\
+    \ crua\n- Banana, nanica, crua\n- Banana, ouro, crua\n- Banana, pacova, crua\n\
+    - Banana, prata, crua\n- Cacau, cru\n- Cajá-Manga, cru\n- Cajá, polpa, congelada\n\
+    - Caju, cru\n- Caju, polpa, congelada\n- Caju, suco concentrado, envasado\n- Caqui,\
+    \ chocolate, cru\n- Carambola, crua\n- Ciriguela, crua\n- Cupuaçu, cru\n- Cupuaçu,\
+    \ polpa, congelada\n- Figo, cru\n- Figo, enlatado, em calda\n- Fruta-pão, crua\n\
+    - Goiaba, branca, com casca, crua\n- Goiaba, doce em pasta\n- Goiaba, doce, cascão\n\
+    - Goiaba, vermelha, com casca, crua\n- Graviola, crua\n- Graviola, polpa, congelada\n\
+    - Jabuticaba, crua\n- Jaca, crua\n- Jambo, cru\n- Jamelão, cru\n- Kiwi, cru\n\
+    - Laranja, baía, crua\n- Laranja, baía, suco\n- Laranja, da terra, crua\n- Laranja,\
+    \ da terra, suco\n- Laranja, lima, crua\n- Laranja, lima, suco\n- Laranja, pêra,\
+    \ crua\n- Laranja, pêra, suco\n- Laranja, valência, crua\n- Laranja, valência,\
+    \ suco\n- Limão, cravo, suco\n- Limão, galego, suco\n- Limão, tahiti, cru\n- Maçã,\
+    \ Argentina, com casca, crua\n- Maçã, Fuji, com casca, crua\n- Macaúba, crua\n\
+    -  Mamão, doce em calda, drenado\n- Mamão, Formosa, cru\n- Mamão, Papaia, cru\n\
+    -  Mamão verde, doce em calda, drenado\n- Manga, Haden, crua\n- Manga, Palmer,\
+    \ crua\n- Manga, polpa, congelada\n- Manga, Tommy Atkins, crua\n- Maracujá, cru\n\
+    - Maracujá, polpa, congelada\n- Maracujá, suco concentrado, envasado\n- Melancia,\
+    \ crua\n- Melão, cru\n- Mexerica, Murcote, crua\n- Mexerica, Rio, crua\n- Morango,\
+    \ cru\n- Nêspera, crua\n- Pequi, cru\n- Pêra, Park, crua\n- Pêra, Williams, crua\n\
+    - Pêssego, Aurora, cru\n- Pêssego, enlatado, em calda\n- Pinha, crua\n- Pitanga,\
+    \ crua\n- Pitanga, polpa, congelada\n- Romã, crua\n- Tamarindo, cru\n- Tangerina,\
+    \ Poncã, crua\n- Tangerina, Poncã, suco\n- Tucumã, cru\n- Umbu, cru\n- Umbu, polpa,\
+    \ congelada\n- Uva, Itália, crua\n- Uva, Rubi, crua\n- Uva, suco concentrado,\
+    \ envasado\n- Azeite, de dendê\n- Azeite, de oliva, extra virgem\n- Manteiga,\
+    \ com sal\n- Manteiga, sem sal\n- Margarina, com óleo hidrogenado, com sal (65%\
+    \ de lipídeos)\n- Margarina, com óleo hidrogenado, sem sal (80% de lipídeos)\n\
+    - Margarina, com óleo interesterificado, com sal (65%de lipídeos)\n- Margarina,\
+    \ com óleo interesterificado, sem sal (65% de lipídeos)\n- Óleo, de babaçu\n-\
+    \ Óleo, de canola\n- Óleo, de girassol\n- Óleo, de milho\n- Óleo, de pequi\n-\
+    \ Óleo, de soja\n- Abadejo, filé, congelado, assado\n- Abadejo, filé, congelado,cozido\n\
+    - Abadejo, filé, congelado, cru\n- Abadejo, filé, congelado, grelhado\n- Atum,\
+    \ conserva em óleo\n- Atum, fresco, cru\n- Bacalhau, salgado, cru\n- Bacalhau,\
+    \ salgado, refogado\n- Cação, posta, com farinha de trigo, frita\n- Cação, posta,\
+    \ cozida\n- Cação, posta, crua\n- Camarão, Rio Grande, grande, cozido\n- Camarão,\
+    \ Rio Grande, grande, cru\n- Camarão, Sete Barbas, sem cabeça, com casca, frito\n\
+    - Caranguejo, cozido\n- Corimba, cru\n- Corimbatá, assado\n- Corimbatá, cozido\n\
+    - Corvina de água doce, crua\n- Corvina do mar, crua\n- Corvina grande, assada\n\
+    - Corvina grande, cozida\n- Dourada de água doce, fresca\n- Lambari, congelado,\
+    \ cru\n- Lambari, congelado, frito\n- Lambari, fresco, cru\n- Manjuba, com farinha\
+    \ de trigo, frita\n- Manjuba, frita\n- Merluza, filé, assado\n- Merluza, filé,\
+    \ cru\n- Merluza, filé, frito\n- Pescada, branca, crua\n- Pescada, branca, frita\n\
+    - Pescada, filé, com farinha de trigo, frito\n- Pescada, filé, cru\n- Pescada,\
+    \ filé, frito\n- Pescada, filé, molho escabeche\n- Pescadinha, crua\n- Pintado,\
+    \ assado\n- Pintado, cru\n- Pintado, grelhado\n- Porquinho, cru\n- Salmão, filé,\
+    \ com pele, fresco,  grelhado\n- Salmão, sem pele, fresco, cru\n- Salmão, sem\
+    \ pele, fresco, grelhado\n- Sardinha, assada\n- Sardinha, conserva em óleo\n-\
+    \ Sardinha, frita\n- Sardinha, inteira, crua\n- Tucunaré, filé, congelado, cru\n\
+    - Apresuntado\n- Caldo de carne, tablete\n- Caldo de galinha, tablete\n- Carne,\
+    \ bovina, acém, moído, cozido\n- Carne, bovina, acém, moído, cru\n- Carne, bovina,\
+    \ acém, sem gordura, cozido\n- Carne, bovina, acém, sem gordura, cru\n- Carne,\
+    \ bovina, almôndegas, cruas\n- Carne, bovina, almôndegas, fritas\n- Carne, bovina,\
+    \ bucho, cozido\n- Carne, bovina, bucho, cru\n- Carne, bovina, capa de contra-filé,\
+    \ com gordura, crua\n- Carne, bovina, capa de contra-filé, com gordura, grelhada\n\
+    - Carne, bovina, capa de contra-filé, sem gordura, crua\n- Carne, bovina, capa\
+    \ de contra-filé, sem gordura, grelhada\n- Carne, bovina, charque, cozido\n- Carne,\
+    \ bovina, charque, cru\n- Carne, bovina, contra-filé, à milanesa\n- Carne, bovina,\
+    \ contra-filé de costela, cru\n- Carne, bovina, contra-filé de costela, grelhado\n\
+    - Carne, bovina, contra-filé, com gordura, cru\n- Carne, bovina, contra-filé,\
+    \ com gordura, grelhado\n- Carne, bovina, contra-filé, sem gordura, cru\n- Carne,\
+    \ bovina, contra-filé, sem gordura, grelhado\n- Carne, bovina, costela, assada\n\
+    - Carne, bovina, costela, crua\n- Carne, bovina, coxão duro, sem gordura, cozido\n\
+    - Carne, bovina, coxão duro, sem gordura, cru\n- Carne, bovina, coxão mole, sem\
+    \ gordura, cozido\n- Carne, bovina, coxão mole, sem gordura, cru\n- Carne, bovina,\
+    \ cupim, assado\n- Carne, bovina, cupim, cru\n- Carne, bovina, fígado, cru\n-\
+    \ Carne, bovina, fígado, grelhado\n- Carne, bovina, filé mingnon, sem gordura,\
+    \ cru\n- Carne, bovina, filé mingnon, sem gordura, grelhado\n- Carne, bovina,\
+    \ flanco, sem gordura, cozido\n- Carne, bovina, flanco, sem gordura, cru\n- Carne,\
+    \ bovina, fraldinha, com gordura, cozida\n- Carne, bovina, fraldinha, com gordura,\
+    \ crua\n- Carne, bovina, lagarto, cozido\n- Carne, bovina, lagarto, cru\n- Carne,\
+    \ bovina, língua, cozida\n- Carne, bovina, língua, crua\n- Carne, bovina, maminha,\
+    \ crua\n- Carne, bovina, maminha, grelhada\n- Carne, bovina, miolo de alcatra,\
+    \ sem gordura, cru\n- Carne, bovina, miolo de alcatra, sem gordura, grelhado\n\
+    - Carne, bovina, músculo, sem gordura, cozido\n- Carne, bovina, músculo, sem gordura,\
+    \ cru\n- Carne, bovina, paleta, com gordura, crua\n- Carne, bovina, paleta, sem\
+    \ gordura, cozida\n- Carne, bovina, paleta, sem gordura, crua\n- Carne, bovina,\
+    \ patinho, sem gordura, cru\n- Carne, bovina, patinho, sem gordura, grelhado\n\
+    - Carne, bovina, peito, sem gordura, cozido\n- Carne, bovina, peito, sem gordura,\
+    \ cru\n- Carne, bovina, picanha, com gordura, crua\n- Carne, bovina, picanha,\
+    \ com gordura, grelhada\n- Carne, bovina, picanha, sem gordura, crua\n- Carne,\
+    \ bovina, picanha, sem gordura, grelhada\n- Carne, bovina, seca, cozida\n- Carne,\
+    \ bovina, seca, crua\n- Coxinha de frango, frita\n- Croquete, de carne, cru\n\
+    - Croquete, de carne, frito\n- Empada de frango, pré-cozida, assada\n- Empada,\
+    \ de frango, pré-cozida\n- Frango, asa, com pele, crua\n- Frango, caipira, inteiro,\
+    \ com pele, cozido\n- Frango, caipira, inteiro, sem pele, cozido\n- Frango, coração,\
+    \ cru\n- Frango, coração, grelhado\n- Frango, coxa, com pele, assada\n- Frango,\
+    \ coxa, com pele, crua\n- Frango, coxa, sem pele, cozida\n- Frango, coxa, sem\
+    \ pele, crua\n- Frango, fígado, cru\n- Frango, filé, à milanesa\n- Frango, inteiro,\
+    \ com pele, cru\n- Frango, inteiro, sem pele, assado\n- Frango, inteiro, sem pele,\
+    \ cozido\n- Frango, inteiro, sem pele, cru\n- Frango, peito, com pele, assado\n\
+    - Frango, peito, com pele, cru\n- Frango, peito, sem pele, cozido\n- Frango, peito,\
+    \ sem pele, cru\n- Frango, peito, sem pele, grelhado\n- Frango, sobrecoxa, com\
+    \ pele, assada\n- Frango, sobrecoxa, com pele, crua\n- Frango, sobrecoxa, sem\
+    \ pele, assada\n- Frango, sobrecoxa, sem pele, crua\n- Hambúrguer, bovino, cru\n\
+    - Hambúrguer, bovino, frito\n- Hambúrguer, bovino, grelhado\n- Lingüiça, frango,\
+    \ crua\n- Lingüiça, frango, frita\n- Lingüiça, frango, grelhada\n- Lingüiça, porco,\
+    \ crua\n- Lingüiça, porco, frita\n- Lingüiça, porco, grelhada\n- Mortadela\n-\
+    \ Peru, congelado, assado\n- Peru, congelado, cru\n- Porco, bisteca, crua\n- Porco,\
+    \ bisteca, frita\n- Porco, bisteca, grelhada\n- Porco, costela, assada\n- Porco,\
+    \ costela, crua\n- Porco, lombo, assado\n- Porco, lombo, cru\n- Porco, orelha,\
+    \ salgada, crua\n- Porco, pernil, assado\n- Porco, pernil, cru\n- Porco, rabo,\
+    \ salgado, cru\n- Presunto, com capa de gordura\n- Presunto, sem capa de gordura\n\
+    - Quibe, assado\n- Quibe, cru\n- Quibe, frito\n- Salame\n- Toucinho, cru\n- Toucinho,\
+    \ frito\n- Bebida láctea, pêssego\n- Creme de Leite\n- Iogurte, natural\n- Iogurte,\
+    \ natural, desnatado\n- Iogurte, sabor abacaxi\n- Iogurte, sabor morango\n- Iogurte,\
+    \ sabor pêssego\n- Leite, condensado\n- Leite, de cabra\n- Leite, de vaca, achocolatado\n\
+    - Leite, de vaca, desnatado, pó\n- Leite, de vaca, desnatado, UHT\n- Leite, de\
+    \ vaca, integral\n- Leite, de vaca, integral, pó\n- Leite, fermentado\n- Queijo,\
+    \ minas, frescal\n- Queijo, minas, meia cura\n- Queijo, mozarela\n- Queijo, parmesão\n\
+    - Queijo, pasteurizado\n- Queijo, petit suisse, morango\n- Queijo, prato\n- Queijo,\
+    \ requeijão, cremoso\n- Queijo, ricota\n- Bebida isotônica, sabores variados\n\
+    - Café, infusão 10%\n- Cana, aguardente 1\n- Cana, caldo de\n- Cerveja, pilsen\
+    \ 2\n- Chá, erva-doce, infusão 5%\n- Chá, mate, infusão 5%\n- Chá, preto, infusão\
+    \ 5%\n- Coco, água de\n- Refrigerante, tipo água tônica\n- Refrigerante, tipo\
+    \ cola\n- Refrigerante, tipo guaraná\n- Refrigerante, tipo laranja\n- Refrigerante,\
+    \ tipo limão\n- Omelete, de queijo\n- Ovo, de codorna, inteiro, cru\n- Ovo, de\
+    \ galinha, clara, cozida/10minutos\n- Ovo, de galinha, gema, cozida/10minutos\n\
+    - Ovo, de galinha, inteiro, cozido/10minutos\n- Ovo, de galinha, inteiro, cru\n\
+    - Ovo, de galinha, inteiro, frito\n- Achocolatado, pó\n- Açúcar, cristal\n- Açúcar,\
+    \ mascavo\n- Açúcar, refinado\n- Chocolate, ao leite\n- Chocolate, ao leite, com\
+    \ castanha do Pará\n- Chocolate, ao leite, dietético\n- Chocolate, meio amargo\n\
+    - Cocada branca\n- Doce, de abóbora, cremoso\n- Doce, de leite, cremoso\n- Geléia,\
+    \ mocotó, natural\n- Glicose de milho\n- Maria mole\n- Maria mole, coco queimado\n\
+    - Marmelada\n- Mel, de abelha\n- Melado\n- Quindim\n- Rapadura\n- Café, pó, torrado\n\
+    - Capuccino, pó\n- Fermento em pó, químico\n- Fermento, biológico, levedura, tablete\n\
+    - Gelatina, sabores variados, pó\n- Sal, dietético\n- Sal, grosso\n- Shoyu\n-\
+    \ Tempero a base de sal\n- Azeitona, preta, conserva\n- Azeitona, verde, conserva\n\
+    - Chantilly, spray, com gordura vegetal\n- Leite, de coco\n- Maionese, tradicional\
+    \ com ovos\n- Acarajé\n- Arroz carreteiro\n- Baião de dois, arroz e feijão-de-corda\n\
+    - Barreado\n- Bife à cavalo, com contra filé\n- Bolinho de arroz\n- Camarão à\
+    \ baiana\n- Charuto, de repolho\n- Cuscuz, de milho, cozido com sal\n- Cuscuz,\
+    \ paulista\n- Cuxá, molho\n- Dobradinha\n- Estrogonofe de carne\n- Estrogonofe\
+    \ de frango\n- Feijão tropeiro mineiro\n- Feijoada\n- Frango, com açafrão\n- Macarrão,\
+    \ molho bolognesa\n- Maniçoba\n- Quibebe\n- Salada, de legumes, com maionese\n\
+    - Salada, de legumes, cozida no vapor\n- Salpicão, de frango\n- Sarapatel\n- Tabule\n\
+    - Tacacá\n- Tapioca, com manteiga\n- Tucupi, com pimenta-de-cheiro\n- Vaca atolada\n\
+    - Vatapá\n- Virado à paulista\n- Yakisoba\n- Amendoim, grão, cru\n- Amendoim,\
+    \ torrado, salgado\n- Ervilha, em vagem\n- Ervilha, enlatada, drenada\n- Feijão,\
+    \ carioca, cozido\n- Feijão, carioca, cru\n- Feijão, fradinho, cozido\n- Feijão,\
+    \ fradinho, cru\n- Feijão, jalo, cozido\n- Feijão, jalo, cru\n- Feijão, preto,\
+    \ cozido\n- Feijão, preto, cru\n- Feijão, rajado, cozido\n- Feijão, rajado, cru\n\
+    - Feijão, rosinha, cozido\n- Feijão, rosinha, cru\n- Feijão, roxo, cozido\n- Feijão,\
+    \ roxo, cru\n- Grão-de-bico, cru\n- Guandu, cru\n- Lentilha, cozida\n- Lentilha,\
+    \ crua\n- Paçoca, amendoim\n- Pé-de-moleque, amendoim\n- Soja, farinha\n- Soja,\
+    \ extrato solúvel, natural, fluido\n- Soja, extrato solúvel, pó\n- Soja, queijo\
+    \ (tofu)\n- Tremoço, cru\n- Tremoço, em conserva\n- Amêndoa, torrada, salgada\n\
+    - Castanha-de-caju, torrada, salgada\n- Castanha-do-Brasil, crua\n- Coco, cru\n\
+    - Coco,  verde, cru\n- Farinha, de mesocarpo de babaçu, crua\n- Gergelim, semente\n\
+    - Linhaça, semente\n- Pinhão, cozido\n- Pupunha, cozida\n- Noz, crua"
